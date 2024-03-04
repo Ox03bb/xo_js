@@ -7,16 +7,19 @@
         <title>tic_tac_tow</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="/style.css">
-        <script src="/index.js"></script>
+        <link rel="stylesheet" type="text/css" href="style.css">
+
+        <script src="index.js"></script>
     </head>
     <body>
         <div class="score"> 
             <div id="p1">X| 0</div>
-            <div><input  id="res" onclick="res()" class="btn" type="button" value="Res"></div>
+            <div><input  id="res" onclick="btn_on()" class="btn" type="button" value="Res">
+                <input  id="res" onclick="btn_off()" class="btn" type="button" value="Res">
+            </div>
             <div id="p2">O| 0</div>
         </div>
-        <div class="bord">
+        <div id="bd" class="bord">
             <input  id="0" onclick="play(0,0,0)" class="btn" type="button" value="">
             <input  id="1" onclick="play(0,1,1)" class="btn" type="button" value="">
             <input  id="2" onclick="play(0,2,2)" class="btn" type="button" value="">
@@ -27,8 +30,32 @@
             <input  id="7" onclick="play(2,1,7)" class="btn" type="button" value="">
             <input  id="8" onclick="play(2,2,8)" class="btn" type="button" value="">
         </div>
+        <div id="settings" class="stng">
+            <div class="bord2">
+                <h3>Mode</h3>
+                <div>   
+                    <label for="mode1">😃 vs 😃</label>
+                    <input type="radio" name="mode" id="mode1">
+                    <label for="mode2">😃 vs 🤖</label>
+                    <input type="radio" name="mode" id="mode2">
+                </div>
+                <h3>method</h3>
+                <div>   
+                    <label for="mode1">online</label>
+                    <input type="radio" name="mode" id="mode1">
+                    <label for="mode2">offline</label>
+                    <input type="radio" name="mode" id="mode2">
+                </div>
+                <h3>online</h3>
+                <div>   
+                    <input type="button" value="create">
+                    <input type="button" value=" join ">
+                </div>
+                <br><br><br>
+                <input type="button" onclick="hidde()" value="Ok">
+            </div>
+        </div>
         <div id="s2" class="score2-h"> 
-           
         </div>
     </body>
 </html>

@@ -1,5 +1,6 @@
 arr = [[0,0,0],[0,0,0],[0,0,0]];
 player = 1 ;// player 1 is X and player 2 is O
+is_start = 0;
 scr  = [0,0] ; 
 winner = 0 ;
 round  = 0 ;
@@ -12,6 +13,35 @@ function popup_off(){
     document.getElementById("s2").classList.remove("score");
     document.getElementById("s2").innerHTML = ` `;
 }
+
+function btn_on(){
+    document.getElementById("0").classList.add("hidde");
+    document.getElementById("1").classList.add("hidde");
+    document.getElementById("2").classList.add("hidde");
+    document.getElementById("3").classList.add("hidde");
+    document.getElementById("4").classList.add("hidde");
+    document.getElementById("5").classList.add("hidde");
+    document.getElementById("6").classList.add("hidde");
+    document.getElementById("7").classList.add("hidde");
+    document.getElementById("8").classList.add("hidde");
+
+}
+function btn_off(){
+    document.getElementById("0").classList.remove("hidde");
+    document.getElementById("1").classList.remove("hidde");
+    document.getElementById("2").classList.remove("hidde");
+    document.getElementById("3").classList.remove("hidde");
+    document.getElementById("4").classList.remove("hidde");
+    document.getElementById("5").classList.remove("hidde");
+    document.getElementById("6").classList.remove("hidde");
+    document.getElementById("7").classList.remove("hidde");
+    document.getElementById("8").classList.remove("hidde");
+}
+
+function hidde(id){
+    document.getElementById("settings").classList.add("hidde");
+}
+
 function play(x,y,bnt){
 
     console.log("play function",x,y,bnt,arr);
